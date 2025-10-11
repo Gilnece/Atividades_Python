@@ -1,0 +1,12 @@
+#crie um algoritmo que leia um número e mostre o seu dobro, triplo e raiz quadrada
+
+num = int(input('Digite um numero: '))
+
+dobro = num * 2
+triplo = num * 3
+raiz = num ** (1/2)
+
+print('O dobro de {} é: {}'.format(num, dobro))
+print('O triplo de {} é: {}'.format(num, triplo))
+print('A raiz quadrada de {} é: {:.4f}'.format(num, raiz))
+#formatação de numero com muitos digitos apos a virgula pode ser feito com :.numerode casas +f
