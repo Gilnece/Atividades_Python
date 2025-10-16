@@ -10,3 +10,7 @@ else:
     print('Você não é um Silva!')
 
 #lower faz com que toda a frase seja convertida em menusculo, fazendo com que a verificação seja mais precisa
+
+'''metodo alternativo
+nome = str(input('Qual é seu nome completo? ')).strip()
+print('Seu nome tem Silva? {}'.format('silva' in nome.lower()))'''
