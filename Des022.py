@@ -10,4 +10,8 @@ else:
 
 #STRIP: remove espaços entras no inicio e no final da string, garantindo que a verificação não falhe
 #LOWER: converte a string para minusculas, tornando a comparação insensível a maiusculas, tudo será tratado igual
+
 #STARTSWITH:verifica se a string começa com a palavra informada
+'''sugestão do professor
+cidade = str(input('digite o nome de uma cidade: ')).strip()
+print(cidade[:5].upper() == 'SANTO')'''
