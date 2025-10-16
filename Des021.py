@@ -6,16 +6,26 @@
 # centena: 8
 # milhar: 1
 
-num = input('Digite um numero entre 0 e 9999: ')[:4]#<- limita o numero a 4 caracteres
-num = num.zfill(4) # preenche com zeros a esquerda se caso o numero tenha menos de 4 digitos
+num = int(input('Digite um numero entre 0 e 9999: '))
+#n = num.zfill(4) # preenche com zeros a esquerda se caso o numero tenha menos de 4 digitos
 
-un = num[3]  #|
-dez = num[2] #|
+'''un = n[3]  #|
+dez = n[2] #|
 #             |-> O NUMERO INDICA O INDICE QUE DEVE SER EXIBIDO
-cen = num[1] #|
-mi = num[0]  #|
+cen = n[1] #|
+mi = n[0]  #|'''
 
-print(f'Unidade: {un}')
+u = num // 1 % 10
+d = num // 10 % 10
+c = num // 100 % 10
+m = num // 1000 % 10
+
+'''print(f'Unidade: {un}')
 print(f'Dezena: {dez}')
 print(f'Centena: {cen}')
-print(f'Milhar: {mi}')
+print(f'Milhar: {mi}')'''
+
+print('Unidade:{}'.format(u))
+print('Dezena: {}'.format(d))
+print('Centena: {}'.format(c))
+print('Milhar: {}'.format(m))
