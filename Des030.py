@@ -1,6 +1,12 @@
 '''Faça um programa que leia um ano qualquer e mostre se ele é bissexto'''
-ano = int(input('Digite o ano desejado: '))
-if ano % 4 == 0:
+from datetime import date
+
+ano = int(input('Digite o ano desejado analisar? Coloque 0 para analisar o ano atual: '))
+if ano == 0:
+    ano = date.today().year
+if ano % 4 == 0 and ano % 100 != 0 or ano % 400 == 0:
     print('o ano {} é bissexto'.format(ano))
 else:
     print('o ano {} não é bissexto'.format(ano))
+'''para calcular um ano bissexto ele deve ter sua divisão inteira por 4 = zero, sua divisão inteira por 100
+deve ser diferente de zero, e deve ter sua divisão inteira por 400 igual a zero'''
