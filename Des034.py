@@ -14,7 +14,7 @@ qt_anos = int(input('Em quantos anos pretende pagar: '))
 entrada = input('terá entrada?')
 mensalidade = qt_anos * 12
 
-if entrada == 'sim' or tera == 'sim':
+if entrada == 'sim' or entrada == 'sim':
     vlentrada = float(input('Digite o valor de entrada: '))
     prestacao = (vcasa - vlentrada) / mensalidade
 else:
@@ -29,4 +29,5 @@ if prestacao > analise:
 elif prestacao < analise:
     print('\033[1;32mCredito aprovado com sucesso\033[0m')
     print('o valor da prestação ficaria em R${:.2f}, 30% do seu salario é: R${:.2f}'.format(prestacao, analise))
+
 
