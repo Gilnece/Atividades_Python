@@ -15,21 +15,21 @@ sleep(2)
 if computador == escolha:
     print('Vamos novamente! Escolhemos {}'.format(computador))
 elif computador == 'pedra' and escolha == 'tesoura':
-    print('Muito bem, você ganhou')
-    print('{} ganha de {}'.format(computador, escolha))
+    print('Mais sorte na proxima, eu ganhei')
+    print('{} perde de {}'.format(escolha, computador))
 elif computador == 'papel' and escolha == 'pedra':
-    print('Muito bem, você ganhou')
-    print('{} ganha de {}'.format(computador, escolha))
+    print('Mais sorte na proxima, eu ganhei')
+    print('{} perde de {}'.format(escolha, computador))
 elif computador == 'tesoura' and escolha == 'papel':
-    print('Muito bem, você ganhou')
-    print('{} ganha de {}'.format(computador, escolha))
+    print('Mais sorte na proxima, eu ganhei')
+    print('{} perde de {}'.format(escolha, computador))
 
 elif computador == 'tesoura' and escolha == 'pedra':
-    print('mais sorte na proxima, eu ganhei, escolhi{}'.format(computador))
-    print('{} ganha de {}'.format(computador, escolha))
+    print('Muito bem, Você ganhou, escolhi {}'.format(computador))
+    print('{} ganha de {}'.format(escolha, computador))
 elif computador == 'pedra' and escolha == 'papel':
-    print('mais sorte na proxima, eu ganhei, escolhi{}'.format(computador))
-    print('{} ganha de {}'.format(computador, escolha))
+    print('Muito bem, Você ganhou, escolhi {}'.format(computador))
+    print('{} ganha de {}'.format(escolha, computador))
 elif computador == 'papel' and escolha == 'tesoura':
-    print('mais sorte na proxima, eu ganhei, escolhi{}'.format(computador))
-    print('{} ganha de {}'.format(computador, escolha))
+    print('Muito bem, Você ganhou, escolhi {}'.format(computador))
+    print('{} ganha de {}'.format(escolha, computador))
