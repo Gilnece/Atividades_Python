@@ -6,50 +6,48 @@ em até 2x no cartão: preço normal
 3x ou mais no cartão: 20% de juros'''
 
 from time import sleep
-computador = 7000
-print('o computador vai custar R${:.2f}'.format(computador))
-
+preco = float(input('Digite o preço das compras: '))
 
 while True:
-    print('\n===MENU PRINCIPAL===')
+    print('\n===FORMA DE PAGAMENTO===')
     print('1 - A vista')
-    print('2 - Cartão 1x')
-    print('3 - Cartão 2x')
-    print('4 - Cartão 3x+')
+    print('2 - A vista no cartão')
+    print('3 - 2x no cartão')
+    print('4 - 3x ou mais no cartão')
     print('5 - Sair\n')
 
     opcao = input('Escolha uma opção: ')
 
     if opcao == '1':
-         vista = computador - (computador * 0.10)
-         print('10% de desconto aplicado!')
+         vlcompra = preco - (preco * (10 / 100))
          print('\033[1;31mPROCESSANDO PAGAMENTO...\033[0m')
          sleep(2)
-         print('A vista no pix ou dinheiro o valor ficou em R${:.2f}'.format(vista))
+         print('10% de desconto aplicado!')
+         print('compra de R${:.2f} a vista ficou em R${:.2f} COM DESCONTO'.format(preco, vlcompra))
          break
     elif opcao == '2':
-        cartao1x = computador - (computador * 0.05)
-        print('5% de desconto aplicado!')
+        vlcompra = preco - (preco * 0.05)
         print('\033[1;31mPROCESSANDO PAGAMENTO...\033[0m')
         sleep(2)
-        print('A vista no cartão ficou em R${:.2f}'.format(cartao1x))
+        print('5% de desconto aplicado!')
+        print('Compra de R${:.2f} a vista no cartão ficou em R${:.2f} COM DESCONTO'.format(preco, vlcompra))
         break
     elif opcao == '3':
-        cartao2x = computador
-        print('Compra sem desconto!')
+        vlcompra = preco
+        parcela = vlcompra / 2
         print('\033[1;31mPROCESSANDO PAGAMENTO...\033[0m')
         sleep(2)
-        print('2x no catão ficou em R${:.2f}'.format(cartao2x))
+        print('Sua compra de R${:.2f} foi parcelada em 2x no cartão, ficou em R${:.2f} SEM JUROS!\nValor das parcelas: R${:.2f}'.format(preco,vlcompra, parcela))
         break
     elif opcao == '4':
-        cartao3x = computador + (computador * 0.20)
-        print('20% de juros aplicado!')
+        vlcompra = preco + (preco * 0.20)
+        qtparcelas = int(input('Quantas parcelas? '))
+        parcela = vlcompra / qtparcelas
         print('\033[1;31mPROCESSANDO PAGAMENTO...\033[0m')
         sleep(2)
-        print('3x ou mais no cartão ficou em R${:.2f}'.format(cartao3x))
+        print('sua compra de R${:.2f} foi parcelado em {}x no cartão, ficou em R${:.2f} COM JUROS\nValor das parcelas: R${:.2f}'.format(preco, qtparcelas, vlcompra, parcela))
         break
     elif opcao == '4':
         break
     else:
         print('Opção invalida! Tente novamente')
-
