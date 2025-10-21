@@ -1,5 +1,5 @@
 '''crie um programa que faça o computador jogar jokenpô com você'''
-import random
+from random import choice
 from time import sleep
 
 print('-=-' * 23)
@@ -8,7 +8,7 @@ print('-=-' * 23)
 
 opcoes = ['pedra', 'papel', 'tesoura']
 
-computador = random.choice(opcoes)
+computador = choice(opcoes)
 escolha = input('Vamos,tente acertar e ganhar de mim!\n ')
 print('PROCESSANDO...')
 sleep(2)
@@ -33,3 +33,4 @@ elif computador == 'pedra' and escolha == 'papel':
 elif computador == 'papel' and escolha == 'tesoura':
     print('Muito bem, Você ganhou, escolhi {}'.format(computador))
     print('{} ganha de {}'.format(escolha, computador))
+
