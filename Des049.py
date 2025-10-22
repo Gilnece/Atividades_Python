@@ -11,7 +11,8 @@ print('-=-'*10)
 print('10 PRIMEIROS TERMOS DE UMA PA')
 print('-=-'*10)
 for pa in range(a1, an + 1, r):
-    print(pa, end=' ')
+    print('{}'.format(pa), end='➜ ')
     cont += 1
     if cont == 10:  # para quando chegar a 10 termos, pare de exibir
         break
+print('FIM')
