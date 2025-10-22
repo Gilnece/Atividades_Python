@@ -2,6 +2,5 @@
 agora utilizando um laço for'''
 
 num = int(input('Digite um numero inteiro: '))
-for c in range(1, 11): # contagem irá começar em 1 e irá ignorar a ultima casa, terminando em 10
-    calculo = num * c # calcular o valor digitado multiplicado pelo range do for
-    print('{} x {} = {}'.format(num, c, calculo))
+for c in range(1, 10+1): # contagem irá começar em 1 e irá ignorar a ultima casa, terminando em 10
+    print('{} x {} = {}'.format(num, c, c*num))
