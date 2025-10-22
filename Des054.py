@@ -5,36 +5,31 @@ qual é o nome do homem mais velho
 quantas mulheres têm menos de 20 anos'''
 
 # Inicializando variáveis
-soma_idade = 0
-homem_mais_velho = ''
-idade_homem_mais_velho = 0
-mulheres_menores_20 = 0
+s_idade = 0 # soma das idades
+hmv = '' # homem mais velho
+ihmv = 0 # idade do homem mais velho
+mu_men_20 = 0 # mulheres menores que 20 anos
 
-# Loop para cadastrar 4 pessoas
-for c in range(1, 5):
-    print(f'----- {c}ª Pessoa -----')
+for c in range(1, 5): # Loop para cadastrar 4 pessoas
+    print('----- {}ª Pessoa -----'.format(c))
     nome = input('Nome: ')
     idade = int(input('Idade: '))
     sexo = input('Sexo (M/F): ').strip().upper()  # padroniza entrada
-
     # Soma das idades para calcular a média
-    soma_idade += idade
+    s_idade += idade
 
-    # Verifica se é homem e se é o mais velho
-    if sexo == 'M':
-        if idade > idade_homem_mais_velho:
-            idade_homem_mais_velho = idade
-            homem_mais_velho = nome
+    if sexo == 'M': # Verifica se é homem e se é o mais velho
+        if idade > ihmv:
+            ihmv = idade
+            hmv = nome
 
-    # Conta mulheres com menos de 20 anos
-    if sexo == 'F' and idade < 20:
-        mulheres_menores_20 += 1
+    if sexo == 'F' and idade < 20: # Conta mulheres com menos de 20 anos
+        mu_men_20 += 1
 
-# Cálculo da média de idade
-media_idade = soma_idade / 4
+media_idade = s_idade / 4 # Cálculo da média de idade
 
 # Resultado final
 print('----- RESULTADOS -----')
-print(f'A média de idade do grupo é {media_idade:.1f} anos.')
-print(f'O homem mais velho é: {homem_mais_velho}')
-print(f'Número de mulheres com menos de 20 anos: {mulheres_menores_20}')
+print('A média de idade do grupo é {:.1f} anos'.format(media_idade))
+print('O homem mais velho é: {}'.format(hmv.capitalize()))
+print('Número de mulheres com menos de 20 anos: {}'.format(mu_men_20))
