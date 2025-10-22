@@ -1,3 +1,5 @@
+'''faça um programa que calcule a soma entre todo os números impares que são
+múltiplos de três e que se encontram no intervalo de 1 até 500'''
 soma = 0
 cont = 0
 for c in range(0, 500+1):
@@ -7,3 +9,4 @@ for c in range(0, 500+1):
             cont = cont + 1 # realiza a contagem de quantas interações foram feitas
 print('A soma entre todos os numeros solicitados é {}'.format(soma))
 print('{} numeros foram encontrados'.format(cont))
+
