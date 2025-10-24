@@ -11,6 +11,7 @@ texto = str(input('Digite uma frase qualquer: '))
 frase = texto # armazenar o testo para exibir no final
 texto = texto.replace(' ', '').lower() # tratando o texto para tirar os espaços e deixar menusculo
 if texto == texto[::-1]: # comparando frase inicial com o oposto dela
-    print('A frase {}, é um palindromo'.format(frase.upper()))
+    print('A frase {} ao contrario é {}'.format(texto.upper(), texto[::-1].upper())) # adicionado metodo para mostrar a frase e o seu contrario
+    print('Se enquadra como um palindromo')
 else:
     print('A frase {} não forma um palindromo'.format(frase.upper()))
