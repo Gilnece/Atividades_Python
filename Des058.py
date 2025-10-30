@@ -8,9 +8,12 @@ cont = 1 # inicializando um contador em 1
 while True: # enquanto for verdadeira a condição a seguir
     jogador = int(input('Digite um numero entre 0 e 10: ')) # informar o numero da tentativa
     if jogador == computador: # quando o resultado for igual ao do computador finaliza
-        print('voce venceu!')
         break
     if jogador != computador: # enquanto for diferente vai contar mais um
+        if computador < jogador:
+            print('Menos... tente novamente')
+        elif computador > jogador:
+            print('Mais... tente novamente')
         cont += 1 # antes iniciado em 1, adiciona mais 1
         continue
 print('Voce venceu com {} palpites.'.format(cont)) # no final vai escrever quantas tentativas foram para acertar
